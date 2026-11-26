@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpiceHub — Restaurant Order Management Portal">
+  <title>SpiceHub — Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/utils.js"></script>
+  <script>Theme.init();</script>
+</head>
+<body class="auth-page">
+
+  <div class="auth-wrap">
+    <!-- ===== Left: brand / hero ===== -->
+    <section class="auth-hero">
+      <div class="hero-blob b1"></div>
+      <div class="hero-blob b2"></div>
+
+      <div class="brand brand-lg">
+        <span class="brand-logo" data-icon="logo" data-size="22"></span>
+        <span class="brand-name">Spice<b>Hub</b></span>
+      </div>
+
+      <div class="hero-content">
+        <span class="hero-pill"><span data-icon="bolt" data-size="14"></span> Restaurant Order Management Portal</span>
+        <h1>From order to plate, <span class="grad">without the chaos.</span></h1>
+        <p>One centralized portal for your menu, orders, table bookings, team and reports. No paper slips, no missed orders, no guesswork.</p>
+
+        <ul class="hero-features">
+          <li><span data-icon="receipt"></span>Live order tracking from kitchen to table</li>
+          <li><span data-icon="calendar"></span>Table bookings with instant confirmation</li>
+          <li><span data-icon="shield"></span>Role-based access for admin, staff &amp; customers</li>
+          <li><span data-icon="chart"></span>Dashboards and sales reports at a glance</li>
+        </ul>
+      </div>
+
+      <div class="hero-float">
+        <div class="float-card fc1">
+          <span class="fc-emoji">🍛</span>
+          <div><strong>ORD-1042</strong><small>Butter Chicken ×2</small></div>
+          <span class="badge s-preparing">Preparing</span>
+        </div>
+        <div class="float-card fc2">
+          <span class="fc-emoji">📈</span>
+          <div><strong>₹24,580</strong><small>Today's revenue</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Right: login / register ===== -->
+    <section class="auth-panel">
+      <button class="icon-btn theme-fab" id="themeBtn" aria-label="Toggle theme"></button>
+
+      <div class="auth-card">
+        <div class="brand mobile-brand">
+          <span class="brand-logo" data-icon="logo" data-size="20"></span>
+          <span class="brand-name">Spice<b>Hub</b></span>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="login" role="tab">Sign In</button>
+          <button class="tab" data-tab="register" role="tab">Create Account</button>
+          <span class="tab-indicator"></span>
+        </div>
+
+        <!-- Login form -->
+        <form id="loginForm" class="auth-form active" novalidate>
+          <h2>Welcome back 👋</h2>
+          <p class="muted">Local demo: data stays in this browser. Use a demo password, never a real one.</p>
+
+          <div class="field">
+            <label for="loginEmail">Email address</label>
+            <div class="input-icon"><span data-icon="mail" data-size="16"></span>
+              <input id="loginEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="loginPassword">Password</label>
+            <div class="input-icon"><span data-icon="lock" data-size="16"></span>
+              <input id="loginPassword" name="password" type="password" placeholder="Enter your password" autocomplete="current-password">
+              <button type="button" class="pw-toggle" aria-label="Show password" data-icon="eye" data-size="16"></button>
+            </div>
+          </div>
+
+          <div class="row-between">
+            <label class="check"><input type="checkbox" name="remember"> Remember me</label>
+            <a href="#" id="forgotLink" class="link-sm">Forgot password?</a>
+          </div>
+
+          <button class="btn btn-primary btn-block btn-lg" type="submit">
+            <span>Sign In</span><span data-icon="arrowRight" data-size="16"></span>
+          </button>
+
+          <div class="demo-box">
+            <p>Try a demo account</p>
+            <div class="demo-btns">
+              <button type="button" data-demo="admin"><span data-icon="shield" data-size="15"></span>Admin</button>
+              <button type="button" data-demo="staff"><span data-icon="utensils" data-size="15"></span>Staff</button>
+              <button type="button" data-demo="customer"><span data-icon="user" data-size="15"></span>Customer</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Register form -->
+        <form id="registerForm" class="auth-form" novalidate>
+          <h2>Create your account</h2>
+          <p class="muted">Create a local demo account. No real orders, bookings or secure authentication.</p>
+
+          <div class="field">
+            <label for="regName">Full name</label>
+            <input id="regName" name="name" type="text" placeholder="e.g. Rahul Verma" autocomplete="name" maxlength="40">
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="regEmail">Email</label>
+              <input id="regEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="regPhone">Mobile</label>
+              <input id="regPhone" name="phone" type="tel" placeholder="10-digit number" maxlength="10" inputmode="numeric" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="regPassword">Password</label>
+            <div class="input-icon no-lead">
+              <input id="regPassword" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password">
+              <button type="button" class="pw-toggle" aria-label="Show password" data-icon="eye" data-size="16"></button>
+            </div>
+            <div class="strength" id="strength"><span></span><span></span><span></span><span></span></div>
+            <small class="strength-label" id="strengthLabel"></small>
+          </div>
+          <div class="field">
+            <label for="regConfirm">Confirm password</label>
+            <input id="regConfirm" name="confirm" type="password" placeholder="Re-enter password" autocomplete="new-password">
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" name="terms"> I agree to the terms of service</label>
+          </div>
+
+          <button class="btn btn-primary btn-block btn-lg" type="submit">
+            <span>Create Account</span><span data-icon="arrowRight" data-size="16"></span>
+          </button>
+        </form>
+      </div>
+
+      <p class="auth-foot">© <span id="year"></span> SpiceHub · Restaurant Order Management Portal</p>
+    </section>
+  </div>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
